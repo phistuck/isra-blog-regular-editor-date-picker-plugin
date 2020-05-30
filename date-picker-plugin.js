@@ -19,7 +19,7 @@ if (!window.RegularEditor)
   {
    return;
   }
-  //date.setHours(date.getHours() - (date.getTimezoneOffset() / 60));
+  date.setHours(date.getHours() - (date.getTimezoneOffset() / 60));
   $("input[name=\"blogtime\"]").val(
    date.toISOString().replace("T", " ").replace(/:\d\d\..+$/, ""));
   $("input[name=\"hebblogtime\"]").val(
