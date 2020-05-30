@@ -1,0 +1,25 @@
+﻿{
+ "name": "Date Picker Plugin For IsraBlog Regular Editor",
+ "version": "0.0.0.1",
+ "manifest_version": 2,
+ "description": "Adds a date picker for changing the post date for the regular editing mode to the rich editor.",
+ "content_scripts":
+ [
+  {
+   "js": ["plugin-injector.js"],
+   "matches": ["http://israblog.nana10.co.il/edit/blogrichedit_m.asp?edit=1",
+               "http://israblog.nana10.co.il/edit/blogedit2_m.asp?edit=1",
+               "http://israblog.nana10.co.il/edit/blogedit2_m.asp",
+               "http://israblog.nana10.co.il/edit/blogedit2_m.asp*",
+               "http://israblog.nana10.co.il/edit/blogrichedit_m.asp",
+               "http://israblog.nana10.co.il/edit/blogrichedit_m.asp*"],
+   "run_at": "document_start",
+   "all_frames": true
+  }
+ ],
+ "permissions": ["http://israblog.nana10.co.il/"],
+ "web_accessible_resources":
+  [
+   "date-picker-plugin.js"
+  ]
+}
